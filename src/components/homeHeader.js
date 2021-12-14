@@ -26,7 +26,7 @@ const homeHeader = () => {
                         Our mission is to provide accessible mental health for everyone.     
                     </p>
 
-                    <CommonButton buttonTitle="DONATE NOW" slug="www.google.com" isGatsbyLink={false}></CommonButton>
+                    <CommonButton buttonTitle="DONATE NOW" slug="https://www.google.com" isGatsbyLink={false}></CommonButton>
                 </div>
 
                 <SocialLinks></SocialLinks>

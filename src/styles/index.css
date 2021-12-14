@@ -2,8 +2,12 @@
     background-color: #FAFAFA;
 }
 
-.bioContainer {
-    background-color: #E7F9FC;
+.primary {
+    background-color: #897298;
+}
+
+.secondary {
+    background-color: #B9D2C4;
 }
 
 .copyContent {
@@ -17,26 +21,3 @@
         padding: 1rem;
     }
 }
-
-.gridContainer {
-    display: grid;
-    padding: 3rem;
-    justify-content: space-evenly;
-    grid-template-columns: 24rem 24rem;
-}
-
-.contentContainer {
-    text-align: center;
-}
-
-.gridContainer > div {
-    background-color: cadetblue;
-    padding: 2rem;
-    margin: 1rem;
-}
-
-@media only screen and (max-width: 480px) {
-    .gridContainer {
-      grid-template-columns: 20rem;
-    }
-  }

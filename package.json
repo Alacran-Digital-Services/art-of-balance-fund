@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "art-of-balance-fund",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A website to fund policy around mental health.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jorge Viramontes <jorge@alacrandigitalservices.com>",
   "dependencies": {
     "@fontsource/montserrat": "^4.5.1",
     "gatsby": "^3.0.1",
@@ -16,8 +16,6 @@
     "gatsby-plugin-react-helmet": "^4.0.0",
     "gatsby-plugin-sass": "^4.9.0",
     "gatsby-plugin-sharp": "^3.6.0",
-    "gatsby-source-filesystem": "^3.6.0",
-    "gatsby-transformer-remark": "^3.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",

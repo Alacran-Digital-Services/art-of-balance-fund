@@ -15,6 +15,7 @@
     .homeBanner {
         padding: 1rem;
         margin: .5rem auto;
+        justify-content: space-around;
     }
 }
 

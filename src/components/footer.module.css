@@ -26,3 +26,9 @@
     padding-top: .75rem;
     margin-right: .75rem;
 }
+
+@media screen and (max-width: 600px) {
+    .footer {
+        padding: 0 0.5rem 1rem 0.5rem;
+    }
+}
