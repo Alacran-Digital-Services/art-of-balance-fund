@@ -21,7 +21,20 @@ const ContactForm = () => (
         </div>
 
         <div className={styles.formItem}>
-            <label>Message</label> 
+            <label>Phone Number</label>
+            <input type="tel" name="phone" size="26" />
+        </div>
+
+        <div className={styles.formItem}>
+            <label>Request Type</label>
+            <input type="radio" id="corporateWorkshop" name="requestType" value="Corporate Workshop" />
+            <label for="corporateWorkshop">Corporate Workshop</label>
+            <input type="radio" id="educationalWorkshop" name="requestType" value="Educational Workshop" />
+            <label for="educationalWorkshop">Educational Workshop</label>
+        </div>
+
+        <div className={styles.formItem}>
+            <label>Message</label>
             <textarea name="message" className={styles.formMessage}></textarea>
         </div>
 
