@@ -1,0 +1,43 @@
+.headerNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 700px) {
+    .headerNav {
+        justify-content: flex-start;
+
+        padding: .2rem;
+        margin: 0;
+    }
+}
+
+.linkContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    margin: 0 .5rem;
+    padding: .5rem 0;
+    min-width: 120px;
+    
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    color: #083f45;
+}
+
+.linkContainer:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+    .linkContainer {
+        min-width: 50px;
+
+        margin: 0.5rem;
+        border: none;
+    }
+}

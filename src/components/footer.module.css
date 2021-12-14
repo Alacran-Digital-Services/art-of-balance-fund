@@ -1,0 +1,28 @@
+.footer {
+    padding: 1.75rem 2rem;
+    color: #021A43;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: 1rem;
+    line-height: 1.1;
+}
+
+.footerLink {
+    text-decoration: none;
+}
+
+.purpleText {
+    color: #B2289B;
+}
+
+.footerLink:hover {
+    text-decoration: underline;
+}
+
+.footerComponent {
+    padding-top: .75rem;
+    margin-right: .75rem;
+}

@@ -1,0 +1,25 @@
+.nameContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.formContainer {
+    max-width: 620px;
+}
+
+.formMessage {
+    width: 100%; 
+    height: 120px;
+}
+
+.formItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.nameItem {
+    @extend .formItem;
+    margin-right: 3rem;
+}

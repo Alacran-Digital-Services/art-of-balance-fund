@@ -1,0 +1,85 @@
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 40s;
+
+// Animation
+@-webkit-keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-180px * 8));
+      transform: translateX(calc(-180px * 8));
+    }
+}
+  
+@keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-180px * 8));
+      transform: translateX(calc(-180px * 8));
+    }
+}
+
+.slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    height: 128px;
+    width: 100%;
+
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 128px;
+		position: absolute;
+		width: 120px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: -1px;
+		top: 0;
+        -webkit-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+}
+
+.sliderTrack {
+    -webkit-animation: scroll $animationSpeed linear infinite;
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    width: calc(180px * 16);
+}
+
+
+.linkContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    text-decoration: none;
+    color: #1A1A1A;
+    width: 180px;
+    height: 128px;
+}

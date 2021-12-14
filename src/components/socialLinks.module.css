@@ -1,0 +1,14 @@
+.socialsContainer {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.linkContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.socials {
+    display: flex;
+    gap: 16px;
+}
