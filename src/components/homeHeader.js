@@ -30,7 +30,7 @@ const homeHeader = () => {
                         When he's not coding or creating content, he loves traveling, meeting new people, and listening to all kinds of music.
                     </p>
 
-                    <CommonButton buttonTitle="VIEW RESUME" slug="https://drive.google.com/file/d/1uirgA5NGFs7y6t-9TP2e1WvkQkfufLXm/view?usp=sharing" isGatsbyLink={false}></CommonButton>
+                    <CommonButton buttonTitle="DONATE NOW" slug="https://drive.google.com/file/d/1uirgA5NGFs7y6t-9TP2e1WvkQkfufLXm/view?usp=sharing" isGatsbyLink={false}></CommonButton>
                 </div>
 
                 <SocialLinks></SocialLinks>

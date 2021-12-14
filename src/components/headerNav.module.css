@@ -15,10 +15,6 @@
 }
 
 .linkContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
     margin: 0 .5rem;
     padding: .5rem 0;
     min-width: 120px;
