@@ -1,8 +1,8 @@
 module.exports = {
   flags: { PRESERVE_WEBPACK_CACHE: true },
   siteMetadata: {
-    title: `Jorge Viramontes`,
-    description: `A portfolio to showcase professional work, blog, and music.`,
+    title: `Art of Balance Fund`,
+    description: `A website to help fund the critical work of mental health.`,
     author: `@jvmontes`,
   },
   plugins: [
@@ -28,7 +28,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/jv.png`, // This path is relative to the root of the site.
+        icon: `src/images/art-of-balance.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,

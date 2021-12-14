@@ -10,27 +10,23 @@ const homeHeader = () => {
         <div className={styles.homeBanner}>
             <div className={styles.bannerDetails}>
                 <div className={styles.title}>
-                    Jorge Viramontes
+                    Art of Balance Fund
                 </div>
 
                 <h4 className={styles.tagline}>
-                    Entrepreneur, Engineer, and Empath
+                    Helping make mental health accessible to all.
                 </h4>
 
                 <div>
                     <p>
-                        Jorge brings over seven years of Fortune 500 consulting experience to the digital entrepreneurship realm from Chicago, IL.
+                        We are a not-for-profit organization generating grants for mental health.
+                        We want to decrease stigma and increase awareness of mental health needs. 
+                        We aim to educate corporate offices to increase awareness for love, care and affection everywhere you go. 
+                        We advocate for public policies lobbying for mental health care. 
+                        Our mission is to provide accessible mental health for everyone.     
                     </p>
 
-                    <p>
-                        He's the owner of Alacrán Digital Services, a digital media company focused on growing small businesses via personal relationships and coaching.
-                    </p>
-
-                    <p>
-                        When he's not coding or creating content, he loves traveling, meeting new people, and listening to all kinds of music.
-                    </p>
-
-                    <CommonButton buttonTitle="DONATE NOW" slug="https://drive.google.com/file/d/1uirgA5NGFs7y6t-9TP2e1WvkQkfufLXm/view?usp=sharing" isGatsbyLink={false}></CommonButton>
+                    <CommonButton buttonTitle="DONATE NOW" slug="www.google.com" isGatsbyLink={false}></CommonButton>
                 </div>
 
                 <SocialLinks></SocialLinks>
@@ -38,7 +34,7 @@ const homeHeader = () => {
 
             <div>
                 <StaticImage
-                    src="../images/jorge-looking-away.jpg" alt="Headshot of Jorge"
+                    src="../images/art-of-balance.png" alt="Art of Balance Logo"
                     placeholder="blurred"
                     layout="fixed"
                     width={340}
