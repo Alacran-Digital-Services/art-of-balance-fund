@@ -22,7 +22,8 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
-    "sass": "^1.35.1"
+    "sass": "^1.35.1",
+    "webpack-filter-warnings-plugin": "^1.2.1"
   },
   "devDependencies": {
     "prettier": "2.2.1"
