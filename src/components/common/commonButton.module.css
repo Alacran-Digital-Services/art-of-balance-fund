@@ -10,6 +10,7 @@
     color: #1a1a1a;
     text-decoration: none;
     transition: all 0.2s ease;
+    margin-bottom: 2rem;
 }
 
 .button:hover {
