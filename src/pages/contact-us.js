@@ -8,7 +8,7 @@ import CommonButton from "../components/common/commonButton"
 
 const ContactPage = () => (
     <Layout>
-        <div style={{ maxWidth: `620px`, margin: `0 auto`, padding: `1rem 1.5rem` }}>
+        <div style={{ maxWidth: `920px`, margin: `0 auto`, padding: `1rem 1.5rem` }}>
             <Seo title="Contact Us" />
             <h1>Contact Us</h1>
             <p>

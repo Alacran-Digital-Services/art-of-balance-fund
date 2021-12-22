@@ -4,6 +4,7 @@ import * as styles from "./contactForm.module.scss"
 const ContactForm = () => (
     <form className={styles.formContainer} name="contact" method="post" data-netlify="true" action="/contact-success" data-netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact" />
+        
         <div className={styles.nameContainer}>
             <div className={styles.nameItem}>
                 <label for="firstName">First Name</label>
@@ -25,12 +26,17 @@ const ContactForm = () => (
             <input type="tel" name="phone" size="26" />
         </div>
 
-        <div className={styles.formItem}>
-            <label>Request Type</label>
-            <input type="radio" id="corporateWorkshop" name="requestType" value="Corporate Workshop" />
-            <label for="corporateWorkshop">Corporate Workshop</label>
-            <input type="radio" id="educationalWorkshop" name="requestType" value="Educational Workshop" />
-            <label for="educationalWorkshop">Educational Workshop</label>
+        <label>Request Type</label>
+
+        <div className={styles.inlineOptionItem}>    
+            <div>
+                <input type="radio" id="corporateWorkshop" name="requestType" value="Corporate Workshop" />
+                <label for="corporateWorkshop" className={styles.optionItem}>Corporate Workshop</label>
+            </div>
+            <div>
+                <input type="radio" id="educationalWorkshop" name="requestType" value="Educational Workshop" />
+                <label for="educationalWorkshop" className={styles.optionItem}>Educational Workshop</label>
+            </div>
         </div>
 
         <div className={styles.formItem}>
@@ -38,7 +44,7 @@ const ContactForm = () => (
             <textarea name="message" className={styles.formMessage}></textarea>
         </div>
 
-        <p>
+        <p className={styles.submitItem}>
             <button type="submit">Send</button>
         </p>
     </form>

@@ -1,25 +1,39 @@
-.nameContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
 .formContainer {
-    max-width: 620px;
-}
-
-.formMessage {
-    width: 100%; 
-    height: 120px;
+    max-width: 800px;
 }
 
 .formItem {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin-bottom: 1rem;
+}
+
+.nameContainer {
+    @extend .formItem;
+    flex-direction: row;
 }
 
 .nameItem {
     @extend .formItem;
     margin-right: 3rem;
+}
+
+.inlineOptionItem {
+    @extend .formItem;
+    flex-direction: row;
+}
+
+.formMessage {
+    width: 100%;
+    height: 120px;
+}
+
+.optionItem {
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+
+.submitItem {
+    text-align: center;
 }
