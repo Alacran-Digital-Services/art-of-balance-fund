@@ -7,40 +7,40 @@ const ContactForm = () => (
         
         <div className={styles.nameContainer}>
             <div className={styles.nameItem}>
-                <label for="firstName">First Name</label>
+                <label htmlFor="firstName">First Name</label>
                 <input type="text" name="firstName" />
             </div>
             <div className={styles.nameItem}>
-                <label for="lastName">Last Name</label>
+                <label htmlFor="lastName">Last Name</label>
                 <input type="text" name="lastName" />
             </div>
         </div>
 
         <div className={styles.formItem}>
-            <label>Email</label>
+            <label htmlFor="emailAddress">Email</label>
             <input type="email" name="emailAddress" size="26" />
         </div>
 
         <div className={styles.formItem}>
-            <label>Phone Number</label>
+            <label htmlFor="phone">Phone Number</label>
             <input type="tel" name="phone" size="26" />
         </div>
 
-        <label>Request Type</label>
+        <p>Request Type</p>
 
         <div className={styles.inlineOptionItem}>    
             <div>
                 <input type="radio" id="corporateWorkshop" name="requestType" value="Corporate Workshop" />
-                <label for="corporateWorkshop" className={styles.optionItem}>Corporate Workshop</label>
+                <label htmlFor="corporateWorkshop" className={styles.optionItem}>Corporate Workshop</label>
             </div>
             <div>
                 <input type="radio" id="educationalWorkshop" name="requestType" value="Educational Workshop" />
-                <label for="educationalWorkshop" className={styles.optionItem}>Educational Workshop</label>
+                <label htmlFor="educationalWorkshop" className={styles.optionItem}>Educational Workshop</label>
             </div>
         </div>
 
         <div className={styles.formItem}>
-            <label>Message</label>
+            <label htmlFor="message">Message</label>
             <textarea name="message" className={styles.formMessage}></textarea>
         </div>
 
