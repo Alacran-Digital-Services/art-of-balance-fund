@@ -1,4 +1,4 @@
-.button {
+.commonButton {
     display: inline-block;
     font-weight: 500;
     padding: 0 20px;
@@ -10,9 +10,10 @@
     color: #1a1a1a;
     text-decoration: none;
     transition: all 0.2s ease;
+    margin-bottom: 2rem;
 }
 
-.button:hover {
+.commonButton:hover {
     color: #fff;
     background-color: #897298;
     border: 1px solid #897298;

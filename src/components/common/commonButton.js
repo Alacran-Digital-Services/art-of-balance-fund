@@ -7,8 +7,8 @@ const CommonButton = ({ buttonTitle, slug, isGatsbyLink }) => {
     return (
         <div>
             {isGatsbyLink
-                ? <p><Link to={slug} className={styles.button}>{buttonTitle}</Link></p>
-                : <a target="_blank" rel="noreferrer" href={slug} className={styles.button}>{buttonTitle}</a>
+                ? <p><Link to={slug} className={styles.commonButton}>{buttonTitle}</Link></p>
+                : <a target="_blank" rel="noreferrer" href={slug} className={styles.commonButton}>{buttonTitle}</a>
             }
         </div>
     )

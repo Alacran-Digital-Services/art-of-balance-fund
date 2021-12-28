@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => (
     <Link to="/">
       <StaticImage
         src="../images/art-of-balance.png" width={80} quality={95}
-        formats={["AUTO", "WEBP", "AVIF"]} alt="JV Logo"
+        formats={["AUTO", "WEBP", "AVIF"]} alt="Art of Balance Logo"
       />
     </Link>
     <HeaderNav></HeaderNav>
