@@ -1,3 +1,6 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = { 
   flags: { FAST_DEV: true, PARALLEL_SOURCING: true },
   siteMetadata: {
@@ -11,6 +14,15 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-notion-api`,
+      options: {
+        token: process.env.NOTION_API_TOKEN,
+        databaseId: process.env.NOTION_API_DATABASE_ID,
+        propsToFrontmatter: true,
+        lowerTitleLevel: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
