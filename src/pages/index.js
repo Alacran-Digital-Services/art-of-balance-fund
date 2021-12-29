@@ -48,7 +48,6 @@ const IndexPage = () => {
         node.properties.subtitle.value || `Short description of the blog.`
       }
       date={node.date}
-      // slug={node.slug}
     />
   ))
 
