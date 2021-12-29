@@ -1,10 +1,10 @@
 import * as React from "react"
+
+import CommonButton from "../components/common/commonButton"
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import ContactForm from "../components/forms/contactForm";
 import "../styles/global.css"
-
-import CommonButton from "../components/common/commonButton"
 
 const ContactPage = () => (
     <Layout>
