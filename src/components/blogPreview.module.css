@@ -1,0 +1,31 @@
+.blog {
+    display: flex;
+    align-items: center;
+    margin: 4px auto 12px auto;
+
+    padding: 0 20px;
+    border-radius: 9px;
+    border: 1px solid #e6e6e6;
+}
+
+.cover {
+    flex: 0 0 96px;
+    width: 96px;
+    height: 96px;
+    margin: 0;
+}
+
+.description {
+    flex: 1;
+    padding: 1rem;
+}
+
+.title {
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.title:hover {
+    color: #B2289B;
+}
