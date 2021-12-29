@@ -1,19 +1,19 @@
 
 import React from 'react'
-import * as styles from "./homeHeader.module.css"
+import CommonButton from "../components/common/commonButton"
+import { homeBanner, bannerDetails, title, tagline } from "./homeHeader.module.css"
 import { StaticImage } from "gatsby-plugin-image"
 import SocialLinks from "../components/socialLinks"
-import CommonButton from "../components/common/commonButton"
 
 const homeHeader = () => {
     return (
-        <div className={styles.homeBanner}>
-            <div className={styles.bannerDetails}>
-                <div className={styles.title}>
+        <div className={homeBanner}>
+            <div className={bannerDetails}>
+                <div className={title}>
                     Art of Balance Fund
                 </div>
 
-                <h4 className={styles.tagline}>
+                <h4 className={tagline}>
                     Helping make mental health accessible to all.
                 </h4>
 

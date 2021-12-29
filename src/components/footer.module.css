@@ -1,4 +1,4 @@
-.footer {
+.footerContainer {
     padding: 1.75rem 2rem;
     color: #021A43;
     
@@ -22,13 +22,8 @@
     text-decoration: underline;
 }
 
-.footerComponent {
-    padding-top: .75rem;
-    margin-right: .75rem;
-}
-
 @media screen and (max-width: 600px) {
-    .footer {
+    .footerContainer {
         padding: 0 0.5rem 1rem 0.5rem;
     }
 }

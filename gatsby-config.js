@@ -1,5 +1,5 @@
-module.exports = {
-  flags: { PRESERVE_WEBPACK_CACHE: true },
+module.exports = { 
+  flags: { FAST_DEV: true, PARALLEL_SOURCING: true },
   siteMetadata: {
     title: `Art of Balance Fund`,
     description: `A website to help fund the critical work of mental health.`,

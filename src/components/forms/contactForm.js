@@ -31,11 +31,11 @@ const ContactForm = () => (
         <div className={styles.inlineOptionItem}>    
             <div>
                 <input type="radio" id="corporateWorkshop" name="requestType" value="Corporate Workshop" />
-                <label htmlFor="corporateWorkshop" className={styles.optionItem}>Corporate Workshop</label>
+                <label htmlFor="requestType" className={styles.optionItem}>Corporate Workshop</label>
             </div>
             <div>
                 <input type="radio" id="educationalWorkshop" name="requestType" value="Educational Workshop" />
-                <label htmlFor="educationalWorkshop" className={styles.optionItem}>Educational Workshop</label>
+                <label htmlFor="requestType" className={styles.optionItem}>Educational Workshop</label>
             </div>
         </div>
 
