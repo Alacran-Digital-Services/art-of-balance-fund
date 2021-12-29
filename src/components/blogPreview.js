@@ -8,7 +8,7 @@ const BlogPreview = ({ blogTitle, excerpt, date, id, imgUrl }) => (
   <div className={styles.blog}>
     <div className={styles.description}>
       <p>{date}</p>
-      <img src={imgUrl} alt="blog image" />
+      <img src={imgUrl} alt="blog" />
       <h2>
         <Link to={id} className={styles.title}>
           {blogTitle}

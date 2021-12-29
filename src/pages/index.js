@@ -39,17 +39,23 @@ const IndexPage = () => {
     }
   `)
 
-  const blogPreviews = data.allNotion.nodes.map(node => (
-    <BlogPreview
-      key={node.id}
-      imgUrl={node.properties.coverImageUrl.value}
-      blogTitle={node.title || `Blog Title`}
-      excerpt={
-        node.properties.subtitle.value || `Short description of the blog.`
-      }
-      date={node.date}
-    />
-  ))
+  const blogPreviews = data.allNotion.nodes
+    .sort(function (a, b) {
+      return new Date(b.date.value.start) - new Date(a.date.value.start)
+    })
+    .slice(0, 2)
+    .map(node => (
+      <BlogPreview
+        key={node.id}
+        id={node.id}
+        imgUrl={node.properties.coverImageUrl.value}
+        blogTitle={node.title || `Blog Title`}
+        excerpt={
+          node.properties.subtitle.value || `Short description of the blog.`
+        }
+        date={node.date.value.start}
+      />
+    ))
 
   return (
     <Layout>
