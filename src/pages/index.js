@@ -41,7 +41,11 @@ const IndexPage = () => {
 
   const blogPreviews = data.allNotion.nodes
     .sort(function (a, b) {
-      return new Date(b.date.value.start) - new Date(a.date.value.start)
+      console.log(a, b)
+      return (
+        new Date(b.properties.date.value.start) -
+        new Date(a.properties.date.value.start)
+      )
     })
     .slice(0, 2)
     .map(node => (
@@ -53,7 +57,7 @@ const IndexPage = () => {
         excerpt={
           node.properties.subtitle.value || `Short description of the blog.`
         }
-        date={node.date.value.start}
+        date={node.properties.date.value.start}
       />
     ))
 
