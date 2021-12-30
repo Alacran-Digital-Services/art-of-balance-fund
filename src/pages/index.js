@@ -40,11 +40,10 @@ const IndexPage = () => {
   `)
 
   const blogPreviews = data.allNotion.nodes
-    .sort(function (a, b) {
-      console.log(a, b)
+    .sort(function (nodeA, nodeB) {
       return (
-        new Date(b.properties.date.value.start) -
-        new Date(a.properties.date.value.start)
+        new Date(nodeA.properties.date.value.start) -
+        new Date(nodeB.properties.date.value.start)
       )
     })
     .slice(0, 2)
@@ -80,7 +79,7 @@ const IndexPage = () => {
       <div className="copyContent">
         <h1 className="secondary">Community Engagement</h1>
         <div className="standardSpacing">
-          <Seo title="Blog" />
+          <Seo title="Home" />
           <div> {blogPreviews} </div>
         </div>
       </div>
