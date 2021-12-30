@@ -15,6 +15,7 @@
     "gatsby-plugin-react-helmet": "^5.4.0",
     "gatsby-plugin-sass": "^5.4.0",
     "gatsby-plugin-sharp": "^4.4.0",
+    "gatsby-source-notion-api": "^0.11.0",
     "gatsby-transformer-sharp": "^4.4.0",
     "prop-types": "^15.8.0",
     "react": "^17.0.2",
