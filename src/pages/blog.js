@@ -1,17 +1,15 @@
-import * as React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import "../styles/global.css"
-import "../styles/index.css"
+import * as React from "react"
 
-import HomeHeader from "../components/homeHeader"
+import "../styles/global.css"
+
 import BlogPreview from "../components/blogPreview"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import CommonButton from "../components/common/commonButton"
 
-const IndexPage = () => {
+const BlogPage = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query BlogQuery {
       allNotion {
         nodes {
           id
@@ -42,13 +40,6 @@ const IndexPage = () => {
 
   const blogPreviews = data.allNotion.nodes
     .filter(node => node.title)
-    .sort(function (nodeA, nodeB) {
-      return (
-        new Date(nodeB.properties.date.value.start) -
-        new Date(nodeA.properties.date.value.start)
-      )
-    })
-    .slice(0, 3)
     .map(node => (
       <BlogPreview
         key={node.id}
@@ -64,33 +55,13 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Seo title="Home" />
-
-      <HomeHeader></HomeHeader>
-
-      <div className="copyContent">
-        <h1 className="secondary">Our Mission</h1>
-        <p>This is placeholder text. Place your mission here.</p>
-      </div>
-
-      <div className="copyContent">
-        <h1 className="primary">Our Values</h1>
-        <p>This is placeholder text. Place your values here.</p>
-      </div>
-
-      <div className="copyContent">
-        <h1 className="secondary">Community Engagement</h1>
-        <div className="standardSpacing">
-          <Seo title="Home" />
-          <div> {blogPreviews} </div>
-          <CommonButton
-            buttonTitle="View all"
-            isGatsbyLink={true}
-            slug={"/blog"}
-          ></CommonButton>
-        </div>
+      <div className="standardSpacing">
+        <Seo title="Blog" />
+        <h1>Blog</h1>
+        <div> {blogPreviews} </div>
       </div>
     </Layout>
   )
 }
-export default IndexPage
+
+export default BlogPage
