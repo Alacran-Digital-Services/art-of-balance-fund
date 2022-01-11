@@ -1,7 +1,7 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
-module.exports = { 
+module.exports = {
   flags: { FAST_DEV: true, PARALLEL_SOURCING: true },
   siteMetadata: {
     title: `Art of Balance Fund`,
