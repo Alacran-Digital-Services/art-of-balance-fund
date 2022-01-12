@@ -4,6 +4,7 @@ import CommonButton from "../components/common/commonButton"
 import { homeBanner, bannerDetails, title, tagline } from "./homeHeader.module.css"
 import { StaticImage } from "gatsby-plugin-image"
 import SocialLinks from "../components/socialLinks"
+import DonationForm from './forms/donationForm'
 
 const homeHeader = () => {
     return (
@@ -26,6 +27,7 @@ const homeHeader = () => {
                         Our mission is to provide accessible mental health for everyone.     
                     </p>
 
+                    <DonationForm></DonationForm>
                     <CommonButton buttonTitle="DONATE NOW" slug="https://www.google.com" isGatsbyLink={false}></CommonButton>
                 </div>
 
