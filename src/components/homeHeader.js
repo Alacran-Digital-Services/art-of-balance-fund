@@ -1,6 +1,5 @@
 
 import React from 'react'
-import CommonButton from "../components/common/commonButton"
 import { homeBanner, bannerDetails, title, tagline } from "./homeHeader.module.css"
 import { StaticImage } from "gatsby-plugin-image"
 import SocialLinks from "../components/socialLinks"
