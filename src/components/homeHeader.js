@@ -28,7 +28,6 @@ const homeHeader = () => {
                     </p>
 
                     <DonationForm></DonationForm>
-                    <CommonButton buttonTitle="DONATE NOW" slug="https://www.google.com" isGatsbyLink={false}></CommonButton>
                 </div>
 
                 <SocialLinks></SocialLinks>
