@@ -1,11 +1,11 @@
 import { useStaticQuery, graphql, Link } from "gatsby"
 import * as React from "react"
 
-import "../styles/global.css"
+import "../..//styles/global.css"
 
-import BlogPreview from "../components/blogPreview"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import BlogPreview from "../../components/blogPreview"
+import Layout from "../../components/layout"
+import Seo from "../../components/seo"
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`

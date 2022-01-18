@@ -86,7 +86,7 @@ const IndexPage = () => {
           <CommonButton
             buttonTitle="View all"
             isGatsbyLink={true}
-            slug={"/blog"}
+            slug={"/blogs"}
           ></CommonButton>
         </div>
       </div>
