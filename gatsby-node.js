@@ -1,8 +1,8 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = require.resolve(
-    `./src/pages/blog/{Notion.properties__slug__value}.js`
+  const blogTemplate = require.resolve(
+    `./src/template/blogTemplate.js`
   )
 
   //gathering all of the blogs by slug. We will then
@@ -48,7 +48,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.allNotion.nodes.forEach(node => {
     createPage({
       path: `/blog${node.properties.slug.value}`,
-      component: blogPostTemplate,
+      component: blogTemplate,
       context: {
         post: node,
       },

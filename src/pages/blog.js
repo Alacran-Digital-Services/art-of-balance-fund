@@ -1,9 +1,9 @@
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import * as React from "react"
 
-import BlogPreview from "../../components/blogPreview"
-import Layout from "../../components/layout"
-import Seo from "../../components/seo"
+import BlogPreview from "../components/blogPreview"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import "../styles/global.css"
 import "../styles/index.css"
 
@@ -31,6 +31,9 @@ const IndexPage = () => {
                 start(formatString: "MM/DD/yyy")
               }
             }
+            slug {
+              value
+            }
             subtitle {
               value
             }
@@ -55,6 +58,7 @@ const IndexPage = () => {
         id={node.id}
         imgUrl={node.properties.coverImageUrl.value}
         blogTitle={node.title || `Blog Title`}
+        slug={node.properties.slug.value}
         excerpt={
           node.properties.subtitle.value || `Short description of the blog.`
         }
