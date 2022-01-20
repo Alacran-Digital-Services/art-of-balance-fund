@@ -14,9 +14,7 @@ export default function Template({ pageContext }) {
             <h4>{post.properties.date.value.start}</h4>
             <span>{post.properties.subtitle.value}</span>
             <img src={post.properties.coverImageUrl.value} />
-
             <div className="blog-post-content" />
-
             {post.properties.body.value}
           </div>
         </div>
