@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
