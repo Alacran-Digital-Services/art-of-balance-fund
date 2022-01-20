@@ -10,7 +10,7 @@ const BlogPreview = ({ blogTitle, excerpt, date, id, imgUrl, slug }) => (
       <p>{date}</p>
       <img src={imgUrl} alt="blog" />
       <h2>
-        <Link to={`blogs${slug}`} className={styles.title}>
+        <Link to={`/blogs${slug}`} className={styles.title}>
           {blogTitle}
         </Link>
       </h2>
@@ -18,7 +18,7 @@ const BlogPreview = ({ blogTitle, excerpt, date, id, imgUrl, slug }) => (
       <p>slug here maybe</p>
       <CommonButton
         buttonTitle="Read more"
-        slug={slug}
+        slug={`/blogs${slug}`}
         isGatsbyLink={true}
       ></CommonButton>
     </div>
