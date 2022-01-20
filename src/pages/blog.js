@@ -1,29 +1,11 @@
 import * as React from "react"
 
-import BlogPreview from "../components/blogPreview"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { getNotionBlogData } from "../utils/graphQL/notionBlogQuery"
+import { generateBlogPreviews } from "../utils/blog/blogPreviewsGenerator"
 
 const BlogPage = () => {
-  const data = getNotionBlogData();
-
-  const blogPreviews = data.allNotion.nodes
-    .filter(node => node.title)
-    .map(node => (
-      <BlogPreview
-        key={node.id}
-        id={node.id}
-        slug={node.properties.slug.value}
-        imgUrl={node.properties.coverImageUrl.value}
-        blogTitle={node.title || `Blog Title`}
-        excerpt={
-          node.properties.subtitle.value || `Short description of the blog.`
-        }
-        date={node.properties.date.value.start}
-      />
-    ))
-
+  const blogPreviews = generateBlogPreviews();
   return (
     <Layout>
       <div className="standardSpacing">

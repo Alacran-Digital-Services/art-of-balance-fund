@@ -3,38 +3,15 @@ import "../styles/global.css"
 import "../styles/index.css"
 
 import HomeHeader from "../components/homeHeader"
-import BlogPreview from "../components/blogPreview"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import CommonButton from "../components/common/commonButton"
-import { getNotionBlogData } from "../utils/graphQL/notionBlogQuery"
+import { generateBlogPreviews } from "../utils/blog/blogPreviewsGenerator"
 
 const IndexPage = () => {
-  const data = getNotionBlogData();
-
-  const blogPreviews = data.allNotion.nodes
-    .filter(node => node.title)
-    .sort(function (nodeA, nodeB) {
-      return (
-        new Date(nodeB.properties.date.value.start) -
-        new Date(nodeA.properties.date.value.start)
-      )
-    })
-    .slice(0, 3)
-    .map(node => (
-      <BlogPreview
-        key={node.id}
-        id={node.id}
-        imgUrl={node.properties.coverImageUrl.value}
-        blogTitle={node.title || `Blog Title`}
-        slug={node.properties.slug.value}
-        excerpt={
-          node.properties.subtitle.value || `Short description of the blog.`
-        }
-        date={node.properties.date.value.start}
-      />
-    ))
-
+  const TOTAL_BLOG_POSTS = 2;
+  const blogPreviews = generateBlogPreviews(TOTAL_BLOG_POSTS);
+  
   return (
     <Layout>
       <Seo title="Home" />
