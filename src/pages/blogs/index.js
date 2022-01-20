@@ -1,8 +1,6 @@
 import { useStaticQuery, graphql, Link } from "gatsby"
 import * as React from "react"
 
-import "../..//styles/global.css"
-
 import BlogPreview from "../../components/blogPreview"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
@@ -26,8 +24,11 @@ const BlogPage = () => {
             }
             date {
               value {
-                start(formatString: "MM/DD/yyy")
+                start
               }
+            }
+            slug {
+              value
             }
             subtitle {
               value
@@ -44,6 +45,7 @@ const BlogPage = () => {
       <BlogPreview
         key={node.id}
         id={node.id}
+        slug={node.properties.slug.value}
         imgUrl={node.properties.coverImageUrl.value}
         blogTitle={node.title || `Blog Title`}
         excerpt={

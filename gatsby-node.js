@@ -1,7 +1,9 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = require.resolve(`./src/templates/blogTemplate.js`)
+  const blogPostTemplate = require.resolve(
+    `./src/pages/blogs/{Notion.properties__slug__value}.js`
+  )
 
   //gathering all of the blogs by slug. We will then
   //loop through all of them and create a template
@@ -9,8 +11,27 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     {
       allNotion {
         nodes {
+          id
+          title
           properties {
+            blurb {
+              value
+            }
+            body {
+              value
+            }
+            coverImageUrl {
+              value
+            }
+            date {
+              value {
+                start(fromNow: true)
+              }
+            }
             slug {
+              value
+            }
+            subtitle {
               value
             }
           }
@@ -24,14 +45,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
-
   result.data.allNotion.nodes.forEach(node => {
     createPage({
-      path: node.properties.slug.value,
+      path: `/blogs${node.properties.slug.value}`,
       component: blogPostTemplate,
       context: {
+        post: node,
         // additional data can be passed via context
-        slug: node.properties.slug.value,
+        // slug: node.properties.slug.value,
+        // title: node.title,
+        // body: node.properties.body.value,
+        // date: node.properties.date.value.start,
       },
     })
   })
