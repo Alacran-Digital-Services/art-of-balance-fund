@@ -24,36 +24,3 @@ export default function Template({ pageContext }) {
     </Layout>
   )
 }
-
-//query the individual blogs by slug
-// export const pageQuery = graphql`
-//   query ($slug: String!) {
-//     notion(properties: { blurb: {}, slug: { value: { eq: $slug } } }) {
-//       title
-//       updatedAt
-//       properties {
-//         blurb {
-//           value
-//         }
-//         body {
-//           value
-//         }
-//         coverImageUrl {
-//           value
-//         }
-//         date {
-//           value {
-//             start(fromNow: true)
-//           }
-//         }
-//         slug {
-//           value
-//         }
-//         subtitle {
-//           value
-//         }
-//       }
-//     }
-//   }
-// `
-//

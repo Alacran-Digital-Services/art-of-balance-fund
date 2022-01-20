@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import * as styles from "../components/blogPreview.module.css"
 import CommonButton from "./common/commonButton"
 
-const BlogPreview = ({ blogTitle, excerpt, date, id, imgUrl, slug }) => (
+const BlogPreview = ({ blogTitle, date, id, excerpt, imgUrl, slug }) => (
   <div className={styles.blog}>
     <div className={styles.description}>
       <p>{date}</p>
@@ -15,7 +15,6 @@ const BlogPreview = ({ blogTitle, excerpt, date, id, imgUrl, slug }) => (
         </Link>
       </h2>
       <p>{excerpt}</p>
-      <p>slug here maybe</p>
       <CommonButton
         buttonTitle="Read more"
         slug={`/blogs${slug}`}
