@@ -1,5 +1,4 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import "../styles/global.css"
 import "../styles/index.css"
 
@@ -8,40 +7,10 @@ import BlogPreview from "../components/blogPreview"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import CommonButton from "../components/common/commonButton"
+import { getNotionBlogData } from "../utils/graphQL/notionBlogQuery"
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query MyQuery {
-      allNotion {
-        nodes {
-          id
-          title
-          properties {
-            blurb {
-              value
-            }
-            body {
-              value
-            }
-            coverImageUrl {
-              value
-            }
-            date {
-              value {
-                start(formatString: "MM/DD/yyy")
-              }
-            }
-            slug {
-              value
-            }
-            subtitle {
-              value
-            }
-          }
-        }
-      }
-    }
-  `)
+  const data = getNotionBlogData();
 
   const blogPreviews = data.allNotion.nodes
     .filter(node => node.title)

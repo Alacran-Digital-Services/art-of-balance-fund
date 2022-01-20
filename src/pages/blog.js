@@ -1,43 +1,12 @@
-import { useStaticQuery, graphql } from "gatsby"
 import * as React from "react"
 
 import BlogPreview from "../components/blogPreview"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { getNotionBlogData } from "../utils/graphQL/notionBlogQuery"
 
 const BlogPage = () => {
-  const data = useStaticQuery(graphql`
-    query BlogQuery {
-      allNotion {
-        nodes {
-          id
-          title
-          properties {
-            blurb {
-              value
-            }
-            body {
-              value
-            }
-            coverImageUrl {
-              value
-            }
-            date {
-              value {
-                start
-              }
-            }
-            slug {
-              value
-            }
-            subtitle {
-              value
-            }
-          }
-        }
-      }
-    }
-  `)
+  const data = getNotionBlogData();
 
   const blogPreviews = data.allNotion.nodes
     .filter(node => node.title)
