@@ -4,13 +4,13 @@ import Seo from "../components/seo";
 import { Link } from "gatsby";
 import "../styles/global.css"
 
-const ContactSuccessPage = () => (
+const DonationSuccessPage = () => (
     <Layout>
         <div className="standardSpacing">
             <Seo title="Success" />
-            <h1>Success!</h1>
+            <h1>Thank You</h1>
             <p>
-                Thanks! Your message was successfully sent. Please allow 1-2 days for a reply.
+                Thanks! Your donation was successfully processed. We appreciate you supporting our efforts to advocate and support mental health.
             </p>
             <p>
                 Back <Link to="/">Home.</Link>
@@ -18,4 +18,4 @@ const ContactSuccessPage = () => (
         </div>
     </Layout>
 )
-export default ContactSuccessPage
+export default DonationSuccessPage

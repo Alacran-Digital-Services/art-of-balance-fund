@@ -1,8 +1,8 @@
 import React from 'react'
 import * as styles from "./donationForm.module.scss"
-import { generateOrderId } from "../../utils/orderIdGenerator"
-import { generateCurrentDateTimeString } from "../../utils/dateTimeGenerator"
-import { generateHash } from "../../utils/hashGenerator"
+import { generateOrderId } from "../../utils/paymentProcessing/orderIdGenerator"
+import { generateCurrentDateTimeString } from "../../utils/date/dateTimeGenerator"
+import { generateHash } from "../../utils/paymentProcessing/hashGenerator"
 
 export default class DonationForm extends React.Component {
 
