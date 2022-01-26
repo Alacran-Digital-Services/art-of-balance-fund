@@ -5,8 +5,13 @@ import { generateCurrentDateTimeString } from "../../utils/dateTimeGenerator"
 import { generateHash } from "../../utils/hashGenerator"
 
 export default function DonationForm() {
+    const SLIDER_MIN = 5
+    const SLIDER_MAX = 1800
+    const SLIDER_STEP = 5
+
     const [donationAmount, setDonationAmount] = useState(150)
-    const [helperText, setHelperText] = useState("Fund 1 session at $150")
+    const [helperText, setHelperText] = useState("Default text")
+    const [sliderBackground, setSliderBackground] = useState("none")
 
     const handleInputChange = event => {
         const target = event.target
@@ -38,6 +43,8 @@ export default function DonationForm() {
     }
 
     useEffect(() => {
+
+        // Generate helper text
         if (donationAmount >= 150 && donationAmount < 1800) {
             let numSession = Math.floor(donationAmount / 150)
             setHelperText(
@@ -50,6 +57,13 @@ export default function DonationForm() {
         } else {
             setHelperText("Your donation will help sponsor clients.")
         }
+
+        // Generate slider background
+        if (donationAmount !== SLIDER_MIN) {
+            let percentage = (donationAmount - SLIDER_MIN) / (SLIDER_MAX - SLIDER_MIN) * 100
+            setSliderBackground(`linear-gradient(to right, #50299c, #7a00ff ${percentage}%, #d3edff ${percentage}%, #dee1e2 100%)`)
+        }
+
     }, [donationAmount])
 
     return (
@@ -64,9 +78,14 @@ export default function DonationForm() {
             <div className={styles.slideContainer}>
                 <div className={styles.slider + " " + styles.formGroup}>
                     <input
-                        type="range" min="5" max="2000" step="5"
-                        name="donationAmount" value={donationAmount}
-                        className={styles.slider} id="donationRange"
+                        name="donationAmount" 
+                        id="donationRange"
+                        type="range" 
+                        value={donationAmount}
+                        min={SLIDER_MIN} 
+                        max={SLIDER_MAX} 
+                        step={SLIDER_STEP}
+                        style={{background: sliderBackground}}
                         onChange={handleInputChange}
                     >
                     </input>
