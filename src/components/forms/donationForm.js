@@ -50,13 +50,19 @@ export default class DonationForm extends React.Component {
                 <p>Please select a donation amount</p>
                 <p>Donation Amount: {this.state.donationAmount}</p>
                 <div className={styles.slideContainer}>
-                    <input 
-                        type="range" min="5" max="100" 
-                        name="donationAmount" value={this.state.donationAmount} 
-                        className={styles.slider} id="donationRange"
-                        onChange={this.handleInputChange}
+                    <div className={styles.slider + " " + styles.formGroup}>
+                        <input
+                            type="range" min="5" max="100" step="5"
+                            name="donationAmount" value={this.state.donationAmount}
+                            className={styles.slider} id="donationRange"
+                            onChange={this.handleInputChange}
                         >
-                    </input>
+                        </input>
+                    </div>
+                    <div className={styles.sliderValue + " " + styles.formGroup}>
+                        <label>Donation Amount</label>
+                        <span></span>
+                    </div>
                 </div>
                 <form action="https://testpayments.nuvei.com/merchant/paymentpage" method="post">
                     <input type="hidden" name="TERMINALID" value={terminalId} />
