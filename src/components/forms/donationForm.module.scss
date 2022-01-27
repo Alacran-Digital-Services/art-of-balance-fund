@@ -9,30 +9,94 @@
 }
 
 .slideContainer {
-  width: 100%;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slider {
-  appearance: none;
-  width: 100%;
-  height: 25px;
-
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
+    width: 45%;
 }
 
 .slider:hover {
   opacity: 1;
 }
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #04aa6d; /* Green background */
-  cursor: pointer; /* Cursor on hover */
+.sliderValue {
+    width: 35%;
+    margin-left: 45px;
+    text-align: center;
+    border-left: #e6e4e4 1px solid;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formGroup label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.formGroup span {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #3c3b3b;
+}
+
+.slider [type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 13px;
+    border-radius: 6px;
+    background: #f1f1f1;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* custom thumb */
+.slider [type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #7a00ff;
+    border: #f9ca24 5px solid;
+    cursor: pointer;
+    -webkit-transition: #7a00ff 0.15s ease-in-out;
+    transition: #7a00ff 0.15s ease-in-out;
+}
+
+.slider [type="range"]::-webkit-slider-thumb:hover {
+    background: #f0932b;
+}
+
+.slider [type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background: #f0932b;
+    border: #f9ca24 5px solid;
+    cursor: pointer;
+    -webkit-transition: #f0932b 0.15s ease-in-out;
+    transition: #f0932b 0.15s ease-in-out;
+}
+
+.slider [type="range"]::-moz-range-thumb:hover {
+    background: #f9ca24;
+}
+
+/* remove border */
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+    border: 0;
 }
