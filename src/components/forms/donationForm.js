@@ -22,6 +22,10 @@ export default function DonationForm() {
     const terminalId = 1064965
     const secret = "123456789G1"
 
+    function donationAmountString() {
+        return `$` + parseFloat(donationAmount).toLocaleString('en-US')
+    }
+
     const orderIdGenerator = {
         internalOrderId: null,
         get orderId() {
@@ -92,7 +96,7 @@ export default function DonationForm() {
                 </div>
                 <div className={styles.sliderValue + " " + styles.formGroup}>
                     <label>Donation Amount</label>
-                    <span></span>
+                    <span>{donationAmountString()}</span>
                 </div>
             </div>
             <form
