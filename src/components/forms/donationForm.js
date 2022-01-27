@@ -47,16 +47,22 @@ export default function DonationForm() {
     }
 
     useEffect(() => {
-
         // Generate helper text
-        if (donationAmount >= 150 && donationAmount < 1800) {
+        if (donationAmount >= 150 && donationAmount < 300) {
+            setHelperText(`Your donation at $${donationAmount} will fund 1 session.`)
+        } else if (donationAmount > 300 && donationAmount < 1800) {
             let numSession = Math.floor(donationAmount / 150)
             setHelperText(
                 `Your donation at $${donationAmount} will fund ${numSession} sessions.`
             )
-        } else if (donationAmount >= 1800) {
+        } else if (donationAmount >= 1800 && donationAmount < 3600) {
             setHelperText(
                 `Your donation at $${donationAmount} will sponsor 1 client for a full 12 sessions.`
+            )
+        } else if (donationAmount >= 3600) {
+            let clients = Math.floor(donationAmount / 1800)
+            setHelperText(
+                `Your donation amount of $${donationAmount} will help sponsor ${clients} clients`
             )
         } else {
             setHelperText("Your donation will help sponsor clients.")
@@ -67,9 +73,8 @@ export default function DonationForm() {
             let percentage = (donationAmount - SLIDER_MIN) / (SLIDER_MAX - SLIDER_MIN) * 100
             setSliderBackground(`linear-gradient(to right, #50299c, #7a00ff ${percentage}%, #d3edff ${percentage}%, #dee1e2 100%)`)
         }
-
     }, [donationAmount])
-
+    
     return (
         <div>
             <p>Please select a donation amount</p>
@@ -82,14 +87,14 @@ export default function DonationForm() {
             <div className={styles.slideContainer}>
                 <div className={styles.slider + " " + styles.formGroup}>
                     <input
-                        name="donationAmount" 
+                        name="donationAmount"
                         id="donationRange"
-                        type="range" 
+                        type="range"
                         value={donationAmount}
-                        min={SLIDER_MIN} 
-                        max={SLIDER_MAX} 
+                        min={SLIDER_MIN}
+                        max={SLIDER_MAX}
                         step={SLIDER_STEP}
-                        style={{background: sliderBackground}}
+                        style={{ background: sliderBackground }}
                         onChange={handleInputChange}
                     >
                     </input>
@@ -138,7 +143,6 @@ export default function DonationForm() {
                         ></input>
                     </span>
                 </div>
-
                 <div className={styles.center}>
                     <p>{helperText}</p>
                     <input type="submit" value="Donate Now" />
