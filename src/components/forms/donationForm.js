@@ -38,14 +38,21 @@ export default function DonationForm() {
   }
 
   useEffect(() => {
-    if (donationAmount >= 150 && donationAmount < 1800) {
+    if (donationAmount >= 150 && donationAmount < 300) {
+      setHelperText(`Your donation at $${donationAmount} will fund 1 session.`)
+    } else if (donationAmount > 300 && donationAmount < 1800) {
       let numSession = Math.floor(donationAmount / 150)
       setHelperText(
         `Your donation at $${donationAmount} will fund ${numSession} sessions.`
       )
-    } else if (donationAmount >= 1800) {
+    } else if (donationAmount >= 1800 && donationAmount < 3600) {
       setHelperText(
         `Your donation at $${donationAmount} will sponsor 1 client for a full 12 sessions.`
+      )
+    } else if (donationAmount >= 3600) {
+      let clients = Math.floor(donationAmount / 1800)
+      setHelperText(
+        `Your donation amount of $${donationAmount} will help sponsor ${clients} clients`
       )
     } else {
       setHelperText("Your donation will help sponsor clients.")
@@ -57,7 +64,7 @@ export default function DonationForm() {
       <p>Please select a donation amount</p>
       <div className={styles.center}>
         <p>Make a Donation Today</p>
-        <sub>Please select a donation amount using our sliding scale</sub>
+        <sub>Please select a donation amount using the sliding scale below</sub>
         <br></br>
       </div>
       <div className={styles.slideContainer}>
@@ -108,6 +115,7 @@ export default function DonationForm() {
               value={donationAmount}
               name="donationAmount"
               onChange={handleInputChange}
+              size={10}
             ></input>
           </span>
         </div>
