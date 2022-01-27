@@ -49,20 +49,20 @@ export default function DonationForm() {
     useEffect(() => {
         // Generate helper text
         if (donationAmount >= 150 && donationAmount < 300) {
-            setHelperText(`Your donation at $${donationAmount} will fund 1 session.`)
+            setHelperText(`Your donation at ${donationAmountString()} will fund 1 session.`)
         } else if (donationAmount > 300 && donationAmount < 1800) {
             let numSession = Math.floor(donationAmount / 150)
             setHelperText(
-                `Your donation at $${donationAmount} will fund ${numSession} sessions.`
+                `Your donation at ${donationAmountString()} will fund ${numSession} sessions.`
             )
         } else if (donationAmount >= 1800 && donationAmount < 3600) {
             setHelperText(
-                `Your donation at $${donationAmount} will sponsor 1 client for a full 12 sessions.`
+                `Your donation at ${donationAmountString()} will sponsor 1 client for a full 12 sessions.`
             )
         } else if (donationAmount >= 3600) {
             let clients = Math.floor(donationAmount / 1800)
             setHelperText(
-                `Your donation amount of $${donationAmount} will help sponsor ${clients} clients`
+                `Your donation amount of ${donationAmountString()} will help sponsor ${clients} clients`
             )
         } else {
             setHelperText("Your donation will help sponsor clients.")
@@ -138,6 +138,7 @@ export default function DonationForm() {
                         <input
                             type="text"
                             value={donationAmount}
+                            size={10}
                             name="donationAmount"
                             onChange={handleInputChange}
                         ></input>
