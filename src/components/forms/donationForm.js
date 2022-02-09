@@ -19,8 +19,8 @@ export default function DonationForm() {
         setDonationAmount(value)
     }
 
-    const terminalId = 1064965
-    const secret = "123456789G1"
+    const terminalId = process.env.GATSBY_NUVEI_TERMINAL_ID;
+    const secret = process.env.GATSBY_NUVEI_SHARED_SECRET;
 
     function donationAmountString() {
         return `$` + parseFloat(donationAmount).toLocaleString("en-US")
