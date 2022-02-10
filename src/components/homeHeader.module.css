@@ -20,8 +20,7 @@
 }
 
 .title {
-    margin-bottom: 1.45rem;
-
+    margin: 0 0 1.45rem 1.45rem;
     text-decoration: none;
     font-weight: bold;
     text-rendering: optimizeLegibility;

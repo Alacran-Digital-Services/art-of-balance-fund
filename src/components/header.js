@@ -7,24 +7,48 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import HeaderNav from "./headerNav"
 
+import {
+	homeBanner,
+	bannerDetails,
+	title,
+	tagline,
+} from "./homeHeader.module.css"
+
 const Header = ({ siteTitle }) => (
-  <header className={headerStyles.header}>
-    <Link to="/">
-      <StaticImage
-        src="../images/art-of-balance.png" width={80} quality={95}
-        formats={["AUTO", "WEBP", "AVIF"]} alt="Art of Balance Logo"
-      />
-    </Link>
-    <HeaderNav></HeaderNav>
-  </header>
+	<header className={headerStyles.header}>
+		<div className={headerStyles.headerLinksWrapper}>
+			<div className={headerStyles.headerLinks}>
+				<Link to="/">
+					<StaticImage
+						src="../images/art-of-balance.png" width={80} quality={95}
+						formats={["AUTO", "WEBP", "AVIF"]} alt="Art of Balance Logo"
+					/>
+				</Link>
+				<HeaderNav></HeaderNav>
+			</div>
+
+		</div>
+		<div className={headerStyles.contentWrapper}>
+			<div className={headerStyles.content}>
+				<div className={title}>Art of Balance Fund
+					<h4 className={tagline}>
+						Helping make mental health accessible to all.
+					</h4>
+				</div>
+			</div>
+		</div>
+
+
+
+	</header>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+	siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+	siteTitle: ``,
 }
 
 export default Header

@@ -3,7 +3,11 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+	text-align: right;
 }
+
+
+
 
 @media screen and (max-width: 700px) {
     .headerNav {
@@ -13,6 +17,8 @@
         margin: 0;
     }
 }
+
+
 
 .linkContainer {
     margin: 0 .5rem;
