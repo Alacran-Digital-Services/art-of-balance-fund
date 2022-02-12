@@ -2,6 +2,8 @@ import * as React from "react"
 import { Link } from "gatsby"
 import * as styles from "./headerNav.module.css"
 
+import CommonButton from "./common/commonButton"
+
 const activeStyles = {
 	textDecoration: `underline`,
 	color: '#1A1A1A',

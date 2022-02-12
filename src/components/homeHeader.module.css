@@ -1,15 +1,14 @@
 .homeBanner {
     display: flex;
-    flex-wrap: wrap;
+	flex-direction: column;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 1100px;
     padding: 4rem;
 }
 
-.bannerDetails {
+/* .bannerDetails {
     max-width: 476px;
-}
+} */
 
 @media screen and (max-width: 600px) {
     .homeBanner {
@@ -17,6 +16,14 @@
         margin: .5rem auto;
         justify-content: space-around;
     }
+}
+
+.left {
+	width: 40%;
+}
+
+.right {
+	width: 50%;
 }
 
 .title {
@@ -30,4 +37,16 @@
 
 .tagline {
     line-height: 1.1;
+}
+
+.sectionii {
+	background-color: black;
+}
+
+.subtext {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 3.3vmax 0 3.3vmax 0;
+	height: 25vh;
 }

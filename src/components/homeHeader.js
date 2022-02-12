@@ -2,50 +2,51 @@ import React from "react"
 import {
 	homeBanner,
 	bannerDetails,
-	title,
-	tagline,
+	subtext,
+	left,
+	right,
+	learning,
+	education,
+	sectionii
 } from "./homeHeader.module.css"
 import { StaticImage } from "gatsby-plugin-image"
 import SocialLinks from "../components/socialLinks"
 import DonationForm from "./forms/donationForm"
+import CommonButton from "./common/commonButton"
 
 const homeHeader = () => {
 	return (
 		<div className={homeBanner}>
+
+			{/* section 1 */}
 			<div className={bannerDetails}>
-				{/* <div className={title}>Art of Balance Fund</div> */}
 
-
-
-				<div>
-					<p>
-						We are a not-for-profit organization generating grants for mental
-						health. We want to decrease stigma and increase awareness of mental
-						health needs. We aim to educate corporate offices to increase
-						awareness for love, care and affection everywhere you go. We
-						advocate for public policies lobbying for mental health care. Our
-						mission is to provide accessible mental health for everyone.
-					</p>
-
-					<DonationForm></DonationForm>
+				<div className={subtext}>
+					<div className={left}>
+						<h1>Helping make mental health accessible to all</h1>
+						<CommonButton
+							buttonTitle={"Our Vision"}
+						/>
+					</div>
+					<div className={right}>
+						<p>
+							We are a not-for-profit organization generating grants for mental
+							health. We want to decrease stigma and increase awareness of mental
+							health needs. We aim to educate corporate offices to increase
+							awareness for love, care and affection everywhere you go. We
+							advocate for public policies lobbying for mental health care. Our
+							mission is to provide accessible mental health for everyone.
+						</p>
+					</div>
 				</div>
 
-				<SocialLinks></SocialLinks>
+
+
+
+				{/* <DonationForm></DonationForm>
+				<SocialLinks></SocialLinks> */}
 			</div>
 
-			<div>
-				<StaticImage
-					src="../images/art-of-balance.png"
-					alt="Art of Balance Logo"
-					placeholder="blurred"
-					layout="fixed"
-					width={340}
-					formats={["AUTO", "WEBP", "AVIF"]}
-					style={{
-						margin: `auto auto 1.45rem`,
-					}}
-				/>
-			</div>
 		</div>
 	)
 }

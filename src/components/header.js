@@ -26,14 +26,13 @@ const Header = ({ siteTitle }) => (
 				</Link>
 				<HeaderNav></HeaderNav>
 			</div>
-
 		</div>
 		<div className={headerStyles.contentWrapper}>
 			<div className={headerStyles.content}>
 				<div className={title}>Art of Balance Fund
-					<h4 className={tagline}>
+					{/* <h4 className={tagline}>
 						Helping make mental health accessible to all.
-					</h4>
+					</h4> */}
 				</div>
 			</div>
 		</div>
