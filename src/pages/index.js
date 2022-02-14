@@ -88,6 +88,13 @@ const IndexPage = () => {
 
 			</div>
 			{/* end of section */}
+
+			{/* section ii : three items */}
+			<div className="sectionii">
+				<div>icon 1</div>
+				<div>icon 2</div>
+				<div>icon 3</div>
+			</div>
 			<div className="copyContent">
 				<h1 className="secondary">Our Mission</h1>
 				<p>This is placeholder text. Place your mission here.</p>

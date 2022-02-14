@@ -53,3 +53,11 @@
 	padding: 3.3vmax 0 3.3vmax 0;
 	
 }
+
+.sectionii {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 25vh;
+}
