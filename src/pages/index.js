@@ -2,17 +2,52 @@ import * as React from "react"
 import "../styles/global.css"
 import "../styles/index.css"
 
+import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import HomeHeader from "../components/homeHeader"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import CommonButton from "../components/common/commonButton"
+import ContentBlock from "../components/contentBlock"
+
 import { generateBlogPreviews } from "../utils/blog/blogPreviewsGenerator"
 
 const IndexPage = () => {
+
+	const gatsbyImageInfo = useStaticQuery(graphql`
+		query SectionOnePhoto {
+			file ( relativePath:{eq: "smiling.png" } ) {
+				childImageSharp {
+					gatsbyImageData(
+						width: 340
+						placeholder: BLURRED
+						formats: [AUTO, WEBP, AVIF]
+						layout: FIXED
+						quality: 100
+					)
+				}
+			}
+		}
+	`)
 	const TOTAL_BLOG_POSTS = 2;
 	const blogPreviews = generateBlogPreviews(TOTAL_BLOG_POSTS);
+	const contentBlockCopy = {
+		sectionOne: {
+			title: "Smiling People",
+			detail: "Sample text",
+			buttonInfo: {
+				title: "Learn More",
+				slug: "/contact-us",
+				isGatsbyLink: true
+			},
+			imageInfo: {
+				alt: 'people smiling',
+				gatsbyImageData: gatsbyImageInfo.file.childImageSharp.gatsbyImageData,
+				shouldImageFloatRight: false
+			},
+		}
+	}
 
 	return (
 		<Layout>
@@ -22,26 +57,10 @@ const IndexPage = () => {
 
 			{/* section  */}
 			<div className="sectionWrapper">
-				<div className="section">
-					<div className="left">
-						<StaticImage
-							src="../images/smiling.png"
-							width={500}
-						/>
-					</div>
-					<div className="right">
-						<h2>Smiling People</h2>
-						<p>
-							We are a not-for-profit organization generating grants for mental
-							health. We want to decrease stigma and increase awareness of mental
-							health needs. We aim to educate corporate offices to increase
-							awareness for love, care and affection everywhere you go. We
-							advocate for public policies lobbying for mental health care. Our
-							mission is to provide accessible mental health for everyone.
-						</p>
-						<CommonButton buttonTitle="Learn More" />
-					</div>
-				</div>
+
+				<ContentBlock
+					contentBlockData={contentBlockCopy.sectionOne}
+				></ContentBlock>
 
 				<div className="section">
 					<div className="right">
