@@ -35,8 +35,8 @@ const IndexPage = () => {
 	const blogPreviews = generateBlogPreviews(TOTAL_BLOG_POSTS);
 	const contentBlockCopy = {
 		sectionOne: {
-			title: "Smiling People",
-			detail: "Sample text",
+			title: "Increase Mental Health Access",
+			detail: "We fund eligible mental health clinics that offer discounted or sliding scale services.",
 			buttonInfo: {
 				title: "Learn More",
 				slug: "/contact-us",
@@ -48,8 +48,8 @@ const IndexPage = () => {
 			},
 		},
 		sectionTwo: {
-			title: "Smiling People",
-			detail: "Sample text",
+			title: "Promote Mental Health Awareness",
+			detail: "We reduce barriers, stigmas, and disparities associated with mental health.",
 			buttonInfo: {
 				title: "Learn More",
 				slug: "/contact-us",
@@ -61,8 +61,8 @@ const IndexPage = () => {
 			},
 		},
 		sectionThree: {
-			title: "Smiling People",
-			detail: "Sample text",
+			title: "Education on Mental Health",
+			detail: "We impact communities, workplaces, and schools through expert-led workshops.",
 			buttonInfo: {
 				title: "Learn More",
 				slug: "/contact-us",
@@ -74,8 +74,8 @@ const IndexPage = () => {
 			},
 		},
 		sectionFour: {
-			title: "Smiling People",
-			detail: "Sample text",
+			title: "Mental Health Advocacy",
+			detail: "We fight for policies and laws promoting mental health access.",
 			buttonInfo: {
 				title: "Learn More",
 				slug: "/contact-us",
