@@ -9,9 +9,10 @@ import HomeHeader from "../components/homeHeader"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import CommonButton from "../components/common/commonButton"
-import ContentBlock from "../components/contentBlock"
 
 import { generateBlogPreviews } from "../utils/blog/blogPreviewsGenerator"
+import LeftImageContentBlock from "../components/common/ContentBlocks/leftImageContentBlock"
+import RightImageContentBlock from "../components/common/ContentBlocks/rightImageContentBlock"
 
 const IndexPage = () => {
 
@@ -44,7 +45,6 @@ const IndexPage = () => {
 			imageInfo: {
 				alt: 'people smiling',
 				gatsbyImageData: gatsbyImageInfo.file.childImageSharp.gatsbyImageData,
-				shouldImageFloatRight: false
 			},
 		},
 		sectionTwo: {
@@ -58,7 +58,6 @@ const IndexPage = () => {
 			imageInfo: {
 				alt: 'people smiling',
 				gatsbyImageData: gatsbyImageInfo.file.childImageSharp.gatsbyImageData,
-				shouldImageFloatRight: false
 			},
 		},
 		sectionThree: {
@@ -72,7 +71,6 @@ const IndexPage = () => {
 			imageInfo: {
 				alt: 'people smiling',
 				gatsbyImageData: gatsbyImageInfo.file.childImageSharp.gatsbyImageData,
-				shouldImageFloatRight: false
 			},
 		},
 		sectionFour: {
@@ -86,7 +84,6 @@ const IndexPage = () => {
 			imageInfo: {
 				alt: 'people smiling',
 				gatsbyImageData: gatsbyImageInfo.file.childImageSharp.gatsbyImageData,
-				shouldImageFloatRight: false
 			},
 		},
 	}
@@ -100,21 +97,21 @@ const IndexPage = () => {
 			{/* section  */}
 			<div className="sectionWrapper">
 
-				<ContentBlock
+				<LeftImageContentBlock
 					contentBlockData={contentBlockCopy.sectionOne}
-				></ContentBlock>
+				></LeftImageContentBlock>
 
-				<ContentBlock
+				<RightImageContentBlock
 					contentBlockData={contentBlockCopy.sectionTwo}
-				></ContentBlock>
+				></RightImageContentBlock>
 
-				<ContentBlock
+				<LeftImageContentBlock
 					contentBlockData={contentBlockCopy.sectionThree}
-				></ContentBlock>
+				></LeftImageContentBlock>
 
-				<ContentBlock
+				<RightImageContentBlock
 					contentBlockData={contentBlockCopy.sectionFour}
-				></ContentBlock>
+				></RightImageContentBlock>
 
 
 				<div className="section">

@@ -1,0 +1,22 @@
+.contentBlockContainer {
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem 0 2rem;
+	flex-wrap: wrap;
+}
+
+.contentBlockText {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+	.contentBlockRightImage {
+		order: 1;
+	}
+
+	.contentBlockLeftText {
+		order: 2;
+	}
+}
