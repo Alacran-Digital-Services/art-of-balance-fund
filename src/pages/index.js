@@ -46,7 +46,49 @@ const IndexPage = () => {
 				gatsbyImageData: gatsbyImageInfo.file.childImageSharp.gatsbyImageData,
 				shouldImageFloatRight: false
 			},
-		}
+		},
+		sectionTwo: {
+			title: "Smiling People",
+			detail: "Sample text",
+			buttonInfo: {
+				title: "Learn More",
+				slug: "/contact-us",
+				isGatsbyLink: true
+			},
+			imageInfo: {
+				alt: 'people smiling',
+				gatsbyImageData: gatsbyImageInfo.file.childImageSharp.gatsbyImageData,
+				shouldImageFloatRight: false
+			},
+		},
+		sectionThree: {
+			title: "Smiling People",
+			detail: "Sample text",
+			buttonInfo: {
+				title: "Learn More",
+				slug: "/contact-us",
+				isGatsbyLink: true
+			},
+			imageInfo: {
+				alt: 'people smiling',
+				gatsbyImageData: gatsbyImageInfo.file.childImageSharp.gatsbyImageData,
+				shouldImageFloatRight: false
+			},
+		},
+		sectionFour: {
+			title: "Smiling People",
+			detail: "Sample text",
+			buttonInfo: {
+				title: "Learn More",
+				slug: "/contact-us",
+				isGatsbyLink: true
+			},
+			imageInfo: {
+				alt: 'people smiling',
+				gatsbyImageData: gatsbyImageInfo.file.childImageSharp.gatsbyImageData,
+				shouldImageFloatRight: false
+			},
+		},
 	}
 
 	return (
@@ -61,6 +103,19 @@ const IndexPage = () => {
 				<ContentBlock
 					contentBlockData={contentBlockCopy.sectionOne}
 				></ContentBlock>
+
+				<ContentBlock
+					contentBlockData={contentBlockCopy.sectionTwo}
+				></ContentBlock>
+
+				<ContentBlock
+					contentBlockData={contentBlockCopy.sectionThree}
+				></ContentBlock>
+
+				<ContentBlock
+					contentBlockData={contentBlockCopy.sectionFour}
+				></ContentBlock>
+
 
 				<div className="section">
 					<div className="right">

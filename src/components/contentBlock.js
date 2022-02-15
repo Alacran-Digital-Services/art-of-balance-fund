@@ -5,8 +5,8 @@ import CommonButton from './common/commonButton'
 
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-function ContentBlock(props) {
-	const { title, detail, buttonInfo, imageInfo } = props
+function ContentBlock({ contentBlockData }) {
+	const { title, detail, buttonInfo, imageInfo } = contentBlockData
 	return (
 		<div>
 			{imageInfo.shouldImageFloatRight ? (
@@ -40,17 +40,19 @@ function ContentBlock(props) {
 }
 
 ContentBlock.propTypes = {
-	title: PropTypes.string.isRequired,
-	detail: PropTypes.string.isRequired,
-	buttonInfo: PropTypes.shape({
+	contentBlockData: PropTypes.shape({
 		title: PropTypes.string.isRequired,
-		slug: PropTypes.string.isRequired,
-		isGatsbyLink: PropTypes.bool.isRequired
-	}),
-	imageInfo: PropTypes.shape({
-		gatsbyImageData: PropTypes.string.isRequired,
-		shouldImageFloatRight: PropTypes.bool.isRequired,
-		alt: PropTypes.string.isRequired
+		detail: PropTypes.string.isRequired,
+		buttonInfo: PropTypes.shape({
+			title: PropTypes.string.isRequired,
+			slug: PropTypes.string.isRequired,
+			isGatsbyLink: PropTypes.bool.isRequired
+		}),
+		imageInfo: PropTypes.shape({
+			gatsbyImageData: PropTypes.string.isRequired,
+			shouldImageFloatRight: PropTypes.bool.isRequired,
+			alt: PropTypes.string.isRequired
+		})
 	})
 }
 
