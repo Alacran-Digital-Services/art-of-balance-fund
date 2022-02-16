@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => (
 			<div className={headerStyles.content}>
 				<div className={title}>Art of Balance Fund
 					{/* <h4 className={tagline}>
-						Helping make mental health accessible to all.
+						Opening the doors to mental health access.
 					</h4> */}
 				</div>
 			</div>

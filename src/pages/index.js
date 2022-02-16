@@ -16,12 +16,45 @@ import RightImageContentBlock from "../components/common/ContentBlocks/rightImag
 
 const IndexPage = () => {
 
-	const gatsbyImageInfo = useStaticQuery(graphql`
-		query SectionOnePhoto {
-			file ( relativePath:{eq: "smiling.png" } ) {
+	const homePagePhotos = useStaticQuery(graphql`
+		query HomePagePhotos {
+			sectionOnePhoto: file ( relativePath:{eq: "girl-with-hope.jpg" } ) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 340
+						width: 400
+						placeholder: BLURRED
+						formats: [AUTO, WEBP, AVIF]
+						layout: FIXED
+						quality: 100
+					)
+				}
+			}
+			sectionTwoPhoto: file ( relativePath:{eq: "girl-in-prayer.jpg" } ) {
+				childImageSharp {
+					gatsbyImageData(
+						width: 400
+						placeholder: BLURRED
+						formats: [AUTO, WEBP, AVIF]
+						layout: FIXED
+						quality: 100
+					)
+				}
+			}
+			sectionThreePhoto: file ( relativePath:{eq: "lady-smiling.jpg" } ) {
+				childImageSharp {
+					gatsbyImageData(
+						width: 400
+						placeholder: BLURRED
+						formats: [AUTO, WEBP, AVIF]
+						layout: FIXED
+						quality: 100
+					)
+				}
+			}
+			sectionFourPhoto: file ( relativePath:{eq: "blind-justice.jpg" } ) {
+				childImageSharp {
+					gatsbyImageData(
+						width: 400
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
 						layout: FIXED
@@ -31,6 +64,7 @@ const IndexPage = () => {
 			}
 		}
 	`)
+
 	const TOTAL_BLOG_POSTS = 2;
 	const blogPreviews = generateBlogPreviews(TOTAL_BLOG_POSTS);
 	const contentBlockCopy = {
@@ -44,7 +78,7 @@ const IndexPage = () => {
 			},
 			imageInfo: {
 				alt: 'people smiling',
-				gatsbyImageData: gatsbyImageInfo.file.childImageSharp.gatsbyImageData,
+				gatsbyImageData: homePagePhotos.sectionOnePhoto.childImageSharp.gatsbyImageData,
 			},
 		},
 		sectionTwo: {
@@ -57,7 +91,7 @@ const IndexPage = () => {
 			},
 			imageInfo: {
 				alt: 'people smiling',
-				gatsbyImageData: gatsbyImageInfo.file.childImageSharp.gatsbyImageData,
+				gatsbyImageData: homePagePhotos.sectionTwoPhoto.childImageSharp.gatsbyImageData,
 			},
 		},
 		sectionThree: {
@@ -70,7 +104,7 @@ const IndexPage = () => {
 			},
 			imageInfo: {
 				alt: 'people smiling',
-				gatsbyImageData: gatsbyImageInfo.file.childImageSharp.gatsbyImageData,
+				gatsbyImageData: homePagePhotos.sectionThreePhoto.childImageSharp.gatsbyImageData,
 			},
 		},
 		sectionFour: {
@@ -83,7 +117,7 @@ const IndexPage = () => {
 			},
 			imageInfo: {
 				alt: 'people smiling',
-				gatsbyImageData: gatsbyImageInfo.file.childImageSharp.gatsbyImageData,
+				gatsbyImageData: homePagePhotos.sectionFourPhoto.childImageSharp.gatsbyImageData,
 			},
 		},
 	}

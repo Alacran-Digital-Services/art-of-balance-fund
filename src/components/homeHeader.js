@@ -23,7 +23,7 @@ const homeHeader = () => {
 
 				<div className={subtext}>
 					<div className={left}>
-						<h1>Helping make mental health accessible to all</h1>
+						<h1>Opening the doors to mental health access.</h1>
 						<CommonButton
 							buttonTitle={"Our Vision"}
 						/>
