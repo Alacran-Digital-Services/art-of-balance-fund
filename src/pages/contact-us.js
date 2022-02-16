@@ -19,7 +19,11 @@ const ContactPage = () => (
             <div>
                 <h2>Want to set up a discover call?</h2>
                 <p>For your convenience, schedule a time to speak with someone from our team using this link.</p>
-                <CommonButton buttonTitle={"Schedule a Discovery Call"} slug={"www.google.com"} isGatsbyLink={false}></CommonButton>
+                <CommonButton commonButtonData={{
+                    buttonTitle: "Schedule a Discovery Call",
+                    slug: "www.calendly.com",
+                    isGatsbyLink: false
+                }} ></CommonButton>
             </div>
 
             <div>

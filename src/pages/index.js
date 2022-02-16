@@ -11,8 +11,7 @@ import Seo from "../components/seo"
 import CommonButton from "../components/common/commonButton"
 
 import { generateBlogPreviews } from "../utils/blog/blogPreviewsGenerator"
-import LeftImageContentBlock from "../components/common/ContentBlocks/leftImageContentBlock"
-import RightImageContentBlock from "../components/common/ContentBlocks/rightImageContentBlock"
+import ContentBlock from "../components/common/contentBlock/contentBlock"
 
 const IndexPage = () => {
 
@@ -21,7 +20,7 @@ const IndexPage = () => {
 			sectionOnePhoto: file ( relativePath:{eq: "girl-with-hope.jpg" } ) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 400
+						width: 340
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
 						layout: FIXED
@@ -32,7 +31,7 @@ const IndexPage = () => {
 			sectionTwoPhoto: file ( relativePath:{eq: "girl-in-prayer.jpg" } ) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 400
+						width: 340
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
 						layout: FIXED
@@ -43,7 +42,7 @@ const IndexPage = () => {
 			sectionThreePhoto: file ( relativePath:{eq: "lady-smiling.jpg" } ) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 400
+						width: 340
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
 						layout: FIXED
@@ -54,7 +53,7 @@ const IndexPage = () => {
 			sectionFourPhoto: file ( relativePath:{eq: "blind-justice.jpg" } ) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 400
+						width: 340
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
 						layout: FIXED
@@ -70,55 +69,74 @@ const IndexPage = () => {
 	const contentBlockCopy = {
 		sectionOne: {
 			title: "Increase Mental Health Access",
-			detail: "We fund eligible mental health clinics that offer discounted or sliding scale services.",
+			detail: `
+			We fund eligible mental health clinics that offer discounted or sliding scale services.
+			We believe that mental health services should be accessible to all. 
+			We fund mental health clinics to see more clients by offering sliding scale services. 
+			Learn more below.`,
 			buttonInfo: {
-				title: "Learn More",
+				buttonTitle: "Learn About Our Sliding Scale Services Program",
 				slug: "/contact-us",
 				isGatsbyLink: true
 			},
 			imageInfo: {
-				alt: 'people smiling',
+				alt: 'A woman looking off into the distance with hope',
 				gatsbyImageData: homePagePhotos.sectionOnePhoto.childImageSharp.gatsbyImageData,
 			},
+			shouldImageDisplayAfterText: false
 		},
 		sectionTwo: {
 			title: "Promote Mental Health Awareness",
-			detail: "We reduce barriers, stigmas, and disparities associated with mental health.",
+			detail: `
+			We reduce barriers, stigmas, and disparities associated with mental health.
+			You should never feel shame when trying to find help in life. 
+			We believe in accepting everyone and anyone and working together towards creating a better world by talking about mental health. 
+			`,
 			buttonInfo: {
-				title: "Learn More",
-				slug: "/contact-us",
+				buttonTitle: "Read More On Our Blog",
+				slug: "/blog",
 				isGatsbyLink: true
 			},
 			imageInfo: {
-				alt: 'people smiling',
+				alt: 'A lady outdoors in prayer',
 				gatsbyImageData: homePagePhotos.sectionTwoPhoto.childImageSharp.gatsbyImageData,
 			},
+			shouldImageDisplayAfterText: true
 		},
 		sectionThree: {
 			title: "Education on Mental Health",
-			detail: "We impact communities, workplaces, and schools through expert-led workshops.",
+			detail: `
+			We impact communities, workplaces, and schools through expert-led workshops.
+			We go into our local communities and make a lasting impact around the conversation of mental health that leaves people feeling empowered.
+			If you are interested in learning more, please check out our corporate workshops page.
+			`,
 			buttonInfo: {
-				title: "Learn More",
-				slug: "/contact-us",
+				buttonTitle: "Learn More About Our Corporate Partnerships",
+				slug: "/corporate-workshops",
 				isGatsbyLink: true
 			},
 			imageInfo: {
-				alt: 'people smiling',
+				alt: 'A lady smiling',
 				gatsbyImageData: homePagePhotos.sectionThreePhoto.childImageSharp.gatsbyImageData,
 			},
+			shouldImageDisplayAfterText: false
 		},
 		sectionFour: {
 			title: "Mental Health Advocacy",
-			detail: "We fight for policies and laws promoting mental health access.",
+			detail: `
+			We fight for policies and laws promoting mental health access.
+			We work with local political leaders to enact change to policies affecting mental health access, equity, and resources.
+			Learn more about our latest efforts in our blog.`,
 			buttonInfo: {
-				title: "Learn More",
-				slug: "/contact-us",
+				buttonTitle: "Read More On Our Blog",
+				slug: "/blog",
 				isGatsbyLink: true
 			},
 			imageInfo: {
-				alt: 'people smiling',
+				alt: 'A picture of a woman with a blindfold holding a scale',
 				gatsbyImageData: homePagePhotos.sectionFourPhoto.childImageSharp.gatsbyImageData,
 			},
+			shouldImageDisplayAfterText: true
 		},
 	}
 
@@ -128,81 +146,34 @@ const IndexPage = () => {
 
 			<HomeHeader></HomeHeader>
 
-			{/* section  */}
 			<div className="sectionWrapper">
 
-				<LeftImageContentBlock
+				<ContentBlock
 					contentBlockData={contentBlockCopy.sectionOne}
-				></LeftImageContentBlock>
+				></ContentBlock>
 
-				<RightImageContentBlock
+				<ContentBlock
 					contentBlockData={contentBlockCopy.sectionTwo}
-				></RightImageContentBlock>
+				></ContentBlock>
 
-				<LeftImageContentBlock
+				<ContentBlock
 					contentBlockData={contentBlockCopy.sectionThree}
-				></LeftImageContentBlock>
+				></ContentBlock>
 
-				<RightImageContentBlock
+				<ContentBlock
 					contentBlockData={contentBlockCopy.sectionFour}
-				></RightImageContentBlock>
-
-
-				<div className="section">
-					<div className="right">
-						<h2>Smiling People</h2>
-						<p>
-							We are a not-for-profit organization generating grants for mental
-							health. We want to decrease stigma and increase awareness of mental
-							health needs. We aim to educate corporate offices to increase
-							awareness for love, care and affection everywhere you go. We
-							advocate for public policies lobbying for mental health care. Our
-							mission is to provide accessible mental health for everyone.
-						</p>
-						<CommonButton buttonTitle="Learn More" />
-					</div>
-					<div className="left">
-						<StaticImage
-							src="../images/smiling.png"
-							width={500}
-						/>
-					</div>
-				</div>
-
-
-				<div className="section">
-					<div className="left">
-						<StaticImage
-							src="../images/smiling.png"
-							width={500}
-						/>
-					</div>
-					<div className="right">
-						<h2>Smiling People</h2>
-						<p>
-							We are a not-for-profit organization generating grants for mental
-							health. We want to decrease stigma and increase awareness of mental
-							health needs. We aim to educate corporate offices to increase
-							awareness for love, care and affection everywhere you go. We
-							advocate for public policies lobbying for mental health care. Our
-							mission is to provide accessible mental health for everyone.
-						</p>
-						<CommonButton buttonTitle="Learn More" />
-					</div>
-				</div>
-
+				></ContentBlock>
 			</div>
-			{/* end of section */}
 
-			{/* section ii : three items */}
-			<div className="sectionii">
-				<div>icon 1</div>
-				<div>icon 2</div>
-				<div>icon 3</div>
-			</div>
 			<div className="copyContent">
-				<h1 className="secondary">Our Mission</h1>
+				<h1 className="secondary">Our Vision</h1>
 				<p>This is placeholder text. Place your mission here.</p>
+
+				<div className="sectionii">
+					<div>icon 1</div>
+					<div>icon 2</div>
+					<div>icon 3</div>
+				</div>
 			</div>
 
 			<div className="copyContent">
@@ -215,10 +186,12 @@ const IndexPage = () => {
 				<div className="standardSpacing">
 					<Seo title="Home" />
 					<div> {blogPreviews} </div>
-					<CommonButton
-						buttonTitle="View all"
-						isGatsbyLink={true}
-						slug={"/blog"}
+					<CommonButton commonButtonData={{
+						buttonTitle: "View all",
+						slug: "/blog",
+						isGatsbyLink: true
+					}}
+
 					></CommonButton>
 				</div>
 			</div>

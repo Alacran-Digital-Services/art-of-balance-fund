@@ -2,8 +2,6 @@ import * as React from "react"
 import { Link } from "gatsby"
 import * as styles from "./headerNav.module.css"
 
-import CommonButton from "./common/commonButton"
-
 const activeStyles = {
 	textDecoration: `underline`,
 	color: '#1A1A1A',
@@ -11,7 +9,6 @@ const activeStyles = {
 }
 
 const HeaderNav = () => (
-
 	<div className={styles.headerNav}>
 		<Link to="/corporate-workshops" className={styles.linkContainer} activeStyle={activeStyles}>
 			Corporate Workshops
@@ -21,7 +18,6 @@ const HeaderNav = () => (
 			Contact Us
 		</Link>
 	</div>
-
 )
 
 export default HeaderNav
