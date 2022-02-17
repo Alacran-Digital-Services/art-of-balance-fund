@@ -3,6 +3,7 @@
 	background-image:  url("../images/robbie.png");
 	background-repeat: no-repeat; 
 	background-size: cover;
+    position: relative;
 }
 
 /* holds the image and link */
@@ -35,12 +36,11 @@
 }
 
 .contentWrapper {
-	padding-top: 13.2vmax;
+    position: absolute;
+    bottom: 0;
 }
 
-.content {
-	width: 75%;
-}
+
 
 @media only screen and (max-width: 600px) {
     .header {

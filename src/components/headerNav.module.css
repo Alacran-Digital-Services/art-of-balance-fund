@@ -6,29 +6,22 @@
 	text-align: right;
 }
 
-
-
-
 @media screen and (max-width: 700px) {
     .headerNav {
         justify-content: flex-start;
-
         padding: .2rem;
         margin: 0;
     }
 }
 
-
-
 .linkContainer {
     margin: 0 .5rem;
     padding: .5rem 0;
     min-width: 120px;
-    
     text-decoration: none;
     text-align: center;
-    font-size: 14px;
-    color: #333333;
+    font-size: 1rem;
+    color: white;
 }
 
 .linkContainer:hover {
@@ -38,7 +31,6 @@
 @media screen and (max-width: 700px) {
     .linkContainer {
         min-width: 50px;
-
         margin: 0.5rem;
         border: none;
     }
