@@ -15,9 +15,9 @@ function ContentBlock({ contentBlockData }) {
 		<div className={contentBlockContainer}>
 			{shouldImageDisplayAfterText === false && (
 				<div className={contentBlockImage}>
-				<GatsbyImage image={imageInfo.gatsbyImageData} alt={imageInfo.alt}>
-				</GatsbyImage>
-			</div>
+					<GatsbyImage image={imageInfo.gatsbyImageData} alt={imageInfo.alt}>
+					</GatsbyImage>
+				</div>
 			)}
 
 			<div className={contentBlockText}>
@@ -32,9 +32,9 @@ function ContentBlock({ contentBlockData }) {
 
 			{shouldImageDisplayAfterText === true && (
 				<div className={contentBlockImage}>
-				<GatsbyImage image={imageInfo.gatsbyImageData} alt={imageInfo.alt}>
-				</GatsbyImage>
-			</div>
+					<GatsbyImage image={imageInfo.gatsbyImageData} alt={imageInfo.alt} >
+					</GatsbyImage>
+				</div>
 			)}
 
 		</div>

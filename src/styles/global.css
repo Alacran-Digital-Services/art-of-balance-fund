@@ -4,3 +4,11 @@
     max-width: 960px;
     padding: 1rem 1.5rem;
 }
+
+
+
+@media screen and (max-width: 600px) {
+    .gatsby-image-wrapper img {
+        width: 90%;
+    }
+}

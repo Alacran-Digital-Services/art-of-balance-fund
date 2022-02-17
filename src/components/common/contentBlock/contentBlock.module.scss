@@ -21,8 +21,10 @@
 }
 
 @media screen and (max-width: 600px) {
+
 	.contentBlockImage {
 		order: 1;
+		
 	}
 
 	.contentBlockText {
@@ -30,4 +32,24 @@
 		max-width: none;
 		margin-top: 2rem;
 	}
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 820px) {
+
+	.contentBlockImage {
+		order: 1;
+		
+	}
+
+	.contentBlockText {
+		order: 2;
+		max-width: none;
+		margin-top: 2rem;
+	}
+
+	.contentBlockContainer {
+		justify-content: center;
+	}
+	
 }
