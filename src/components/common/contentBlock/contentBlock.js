@@ -4,48 +4,58 @@ import {
 	contentBlockContainer,
 	contentBlockText,
 	contentBlockImage
-} from './contentBlock.module.css'
+} from './contentBlock.module.scss'
 import CommonButton from '../commonButton'
 
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-function LeftImageContentBlock({ contentBlockData }) {
-	const { title, detail, buttonInfo, imageInfo } = contentBlockData
+function ContentBlock({ contentBlockData }) {
+	const { title, detail, buttonInfo, imageInfo, shouldImageDisplayAfterText } = contentBlockData
 	return (
 		<div className={contentBlockContainer}>
-			<div className={contentBlockImage}>
+			{shouldImageDisplayAfterText === false && (
+				<div className={contentBlockImage}>
 				<GatsbyImage image={imageInfo.gatsbyImageData} alt={imageInfo.alt}>
 				</GatsbyImage>
 			</div>
+			)}
+
 			<div className={contentBlockText}>
 				<h2>{title}</h2>
 				<p>{detail}</p>
 				{buttonInfo && (
 					<CommonButton
-						buttonTitle={buttonInfo.title}
-						slug={buttonInfo.slug}
-						isGatsbyLink={buttonInfo.isGatsbyLink}
+						commonButtonData={buttonInfo}
 					></CommonButton>
 				)}
 			</div>
+
+			{shouldImageDisplayAfterText === true && (
+				<div className={contentBlockImage}>
+				<GatsbyImage image={imageInfo.gatsbyImageData} alt={imageInfo.alt}>
+				</GatsbyImage>
+			</div>
+			)}
+
 		</div>
 	)
 }
 
-LeftImageContentBlock.propTypes = {
+ContentBlock.propTypes = {
 	contentBlockData: PropTypes.shape({
 		title: PropTypes.string.isRequired,
 		detail: PropTypes.string.isRequired,
 		buttonInfo: PropTypes.shape({
-			title: PropTypes.string.isRequired,
+			buttonTitle: PropTypes.string.isRequired,
 			slug: PropTypes.string.isRequired,
 			isGatsbyLink: PropTypes.bool.isRequired
 		}),
 		imageInfo: PropTypes.shape({
-			gatsbyImageData: PropTypes.string.isRequired,
+			gatsbyImageData: PropTypes.object.isRequired,
 			alt: PropTypes.string.isRequired
-		})
+		}),
+		shouldImageDisplayAfterText: PropTypes.bool.isRequired
 	})
 }
 
-export default LeftImageContentBlock
+export default ContentBlock

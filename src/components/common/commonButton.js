@@ -1,8 +1,10 @@
 import * as React from "react"
+import PropTypes from 'prop-types'
 import { Link } from "gatsby"
-import * as styles from "./commonButton.module.css"
+import * as styles from "./commonButton.module.scss"
 
-const CommonButton = ({ buttonTitle, slug, isGatsbyLink }) => {
+function CommonButton({ commonButtonData }) {
+  const { buttonTitle, slug, isGatsbyLink } = commonButtonData;
   return (
     <div>
       {isGatsbyLink ? (
@@ -23,6 +25,14 @@ const CommonButton = ({ buttonTitle, slug, isGatsbyLink }) => {
       )}
     </div>
   )
+}
+
+CommonButton.propTypes = {
+  commonButtonData: PropTypes.shape({
+    buttonTitle: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    isGatsbyLink: PropTypes.bool.isRequired
+  })
 }
 
 export default CommonButton
