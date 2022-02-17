@@ -3,26 +3,17 @@ import {
 	homeBanner,
 	bannerDetails,
 	subtext,
-	left,
-	right,
-	learning,
-	education,
-	sectionii
+	subtextTitle,
+	subtextDescription
 } from "./homeHeader.module.css"
-import { StaticImage } from "gatsby-plugin-image"
-import SocialLinks from "../components/socialLinks"
-import DonationForm from "./forms/donationForm"
 import CommonButton from "./common/commonButton"
 
 const homeHeader = () => {
 	return (
 		<div className={homeBanner}>
-
-			{/* section 1 */}
 			<div className={bannerDetails}>
-
 				<div className={subtext}>
-					<div className={left}>
+					<div className={subtextTitle}>
 						<h1>Opening the doors to mental health access.</h1>
 						<CommonButton commonButtonData={{
 							buttonTitle: "Our Vision",
@@ -30,7 +21,7 @@ const homeHeader = () => {
 							isGatsbyLink: true
 						}} />
 					</div>
-					<div className={right}>
+					<div className={subtextDescription}>
 						<p>
 							We are a not-for-profit organization generating grants for mental
 							health. We want to decrease stigma and increase awareness of mental
@@ -41,14 +32,7 @@ const homeHeader = () => {
 						</p>
 					</div>
 				</div>
-
-
-
-
-				{/* <DonationForm></DonationForm>
-				<SocialLinks></SocialLinks> */}
 			</div>
-
 		</div>
 	)
 }
