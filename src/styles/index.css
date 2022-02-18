@@ -41,6 +41,7 @@
 }
 
 @media screen and (max-width: 600px) {
+    
 	.sectionWrapper {
 		padding: 2rem;
 	}

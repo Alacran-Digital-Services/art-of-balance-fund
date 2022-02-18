@@ -20,10 +20,9 @@ const IndexPage = ({ location }) => {
 			sectionOnePhoto: file ( relativePath:{eq: "girl-with-hope.jpg" } ) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 340
+						width: 580
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
-						layout: FIXED
 						quality: 100
 					)
 				}
@@ -31,10 +30,9 @@ const IndexPage = ({ location }) => {
 			sectionTwoPhoto: file ( relativePath:{eq: "girl-in-prayer.jpg" } ) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 340
+						width: 580
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
-						layout: FIXED
 						quality: 100
 					)
 				}
@@ -42,10 +40,9 @@ const IndexPage = ({ location }) => {
 			sectionThreePhoto: file ( relativePath:{eq: "lady-smiling.jpg" } ) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 340
+						width: 580
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
-						layout: FIXED
 						quality: 100
 					)
 				}
@@ -53,10 +50,9 @@ const IndexPage = ({ location }) => {
 			sectionFourPhoto: file ( relativePath:{eq: "blind-justice.jpg" } ) {
 				childImageSharp {
 					gatsbyImageData(
-						width: 340
+						width: 580
 						placeholder: BLURRED
 						formats: [AUTO, WEBP, AVIF]
-						layout: FIXED
 						quality: 100
 					)
 				}
