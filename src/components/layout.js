@@ -14,8 +14,7 @@ import "./layout.css"
 import Header from "./header"
 import Footer from "./footer"
 
-const Layout = ({ children, pathname }) => {
-  console.log(pathname)
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

@@ -13,8 +13,7 @@ import CommonButton from "../components/common/commonButton"
 import { generateBlogPreviews } from "../utils/blog/blogPreviewsGenerator"
 import ContentBlock from "../components/common/contentBlock/contentBlock"
 
-const IndexPage = ({ location }) => {
-	const { pathname } = location
+const IndexPage = () => {
 	const homePagePhotos = useStaticQuery(graphql`
 		query HomePagePhotos {
 			sectionOnePhoto: file ( relativePath:{eq: "girl-with-hope.jpg" } ) {
@@ -137,7 +136,7 @@ const IndexPage = ({ location }) => {
 	}
 
 	return (
-		<Layout pathname={pathname}>
+		<Layout>
 			<Seo title="Home" />
 
 			<HomeHeader></HomeHeader>

@@ -6,11 +6,10 @@ import Seo from "../components/seo";
 import ContactForm from "../components/forms/contactForm";
 import "../styles/global.css"
 
-const ContactPage = ({ location }) => {
-    const { pathname } = location
+const ContactPage = () => {
     return (
 
-        <Layout pathname={pathname}>
+        <Layout>
             <div style={{ maxWidth: `920px`, margin: `0 auto`, padding: `1rem 1.5rem` }}>
                 <Seo title="Contact Us" />
                 <h1>Contact Us</h1>

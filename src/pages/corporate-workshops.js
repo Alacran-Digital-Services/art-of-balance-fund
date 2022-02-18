@@ -7,9 +7,8 @@ import "../styles/global.css"
 
 
 const AboutPage = () => {
-    const { pathname } = location
     return (
-        <Layout pathname={pathname}>
+        <Layout>
             <div className="standardSpacing">
                 <Seo title="Corporate Workshops" />
                 <h1>Corporate Workshops</h1>
