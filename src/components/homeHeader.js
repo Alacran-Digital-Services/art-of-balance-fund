@@ -14,7 +14,7 @@ const homeHeader = () => {
 			<div className={bannerDetails}>
 				<div className={subtext}>
 					<div className={subtextTitle}>
-						<h1>Opening the doors to mental health access.</h1>
+						<h2>Opening the doors to mental health access.</h2>
 						<CommonButton commonButtonData={{
 							buttonTitle: "Our Vision",
 							slug: "/",
