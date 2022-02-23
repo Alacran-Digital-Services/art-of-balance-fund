@@ -70,7 +70,7 @@ const IndexPage = () => {
 			We fund mental health clinics to see more clients by offering sliding scale services. 
 			Learn more below.`,
 			buttonInfo: {
-				buttonTitle: "Learn About Our Sliding Scale Services Program",
+				buttonTitle: "Learn More",
 				slug: "/contact-us",
 				isGatsbyLink: true
 			},
@@ -88,7 +88,7 @@ const IndexPage = () => {
 			We believe in accepting everyone and anyone and working together towards creating a better world by talking about mental health. 
 			`,
 			buttonInfo: {
-				buttonTitle: "Read More On Our Blog",
+				buttonTitle: "Read On Our Blog",
 				slug: "/blog",
 				isGatsbyLink: true
 			},
@@ -106,7 +106,7 @@ const IndexPage = () => {
 			If you are interested in learning more, please check out our corporate workshops page.
 			`,
 			buttonInfo: {
-				buttonTitle: "Learn More About Our Corporate Partnerships",
+				buttonTitle: "Learn About Corporate Workshops",
 				slug: "/corporate-workshops",
 				isGatsbyLink: true
 			},
@@ -123,7 +123,7 @@ const IndexPage = () => {
 			We work with local political leaders to enact change to policies affecting mental health access, equity, and resources.
 			Learn more about our latest efforts in our blog.`,
 			buttonInfo: {
-				buttonTitle: "Read More On Our Blog",
+				buttonTitle: "Read Community Engagement Blog",
 				slug: "/blog",
 				isGatsbyLink: true
 			},
@@ -161,7 +161,7 @@ const IndexPage = () => {
 			</div>
 
 			<div className="copyContent">
-				<h1 className="secondary">Our Vision</h1>
+				<h1 className="secondary">View Our Vision</h1>
 				<p>This is placeholder text. Place your mission here.</p>
 
 				<div className="sectionii">

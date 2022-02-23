@@ -91,7 +91,7 @@ export default function DonationForm() {
             <h3><u>Make a Donation Today</u></h3>
             <div style={{ fontSize: `.8rem` }}>
                 <p>Our work is possible by the generous contributions of passionate individuals looking to drive change.</p>
-                <p>To make a contribution to the Art of Balance Fund, please select a donation amount using our sliding scale below or manually enter an amount.</p>
+                <p>To make a contribution to The Art of Balance Fund, please select a donation amount using our sliding scale below or manually enter an amount.</p>
                 <p>Thank you for supporting our mission to make mental health accessible by all.</p>
 
             </div>
