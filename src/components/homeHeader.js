@@ -16,7 +16,7 @@ const homeHeader = () => {
 					<div className={subtextTitle}>
 						<h2>Opening the doors to mental health access.</h2>
 						<CommonButton commonButtonData={{
-							buttonTitle: "Our Vision",
+							buttonTitle: "View Our Vision",
 							slug: "/",
 							isGatsbyLink: true
 						}} />
