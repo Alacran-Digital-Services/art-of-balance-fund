@@ -21,3 +21,28 @@
         padding: 1rem;
     }
 }
+
+.sectionWrapper {
+    display: flex;
+	flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 4rem;
+	background-color: #4c3e4a;
+	color: #fff;
+}
+
+.sectionii {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 25vh;
+}
+
+@media screen and (max-width: 600px) {
+    
+	.sectionWrapper {
+		padding: 2rem;
+	}
+}
