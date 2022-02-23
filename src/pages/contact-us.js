@@ -15,7 +15,7 @@ const ContactPage = () => {
                 <h1>Contact Us</h1>
                 <p>
                     We are always looking for more opportunities to make a difference.
-                    Please fill out the form below to have a conversation on how Art of Balance Fund can make an impact in your organization.
+                    Please fill out the form below to have a conversation on how The Art of Balance Fund can make an impact in your organization.
                 </p>
 
                 <div>

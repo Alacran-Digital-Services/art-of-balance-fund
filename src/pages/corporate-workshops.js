@@ -17,7 +17,7 @@ const AboutPage = () => {
                 </h2>
 
                 <p>
-                    [PLACEHOLDER TEXT] Art of Balance Fund provides opportunities for corporations to create unique and valuable experiences for their employees around their mental health.
+                    The Art of Balance Fund provides opportunities for corporations to create unique and valuable experiences for their employees around their mental health.
                     We provide an intensive, deep dive into what we need to feel better about things going on in life.
                     Through our customized approach, we provide valuable insights to your employees to become better performers on the job by working through their internal mindset, which drives everything they do.
                 </p>

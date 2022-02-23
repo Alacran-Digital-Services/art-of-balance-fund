@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => (
 				<Link to="/">
 					<StaticImage
 						src="../images/art-of-balance.png" width={80} quality={95}
-						formats={["AUTO", "WEBP", "AVIF"]} alt="Art of Balance Logo"
+						formats={["AUTO", "WEBP", "AVIF"]} alt="The Art of Balance Fund Logo"
 					/>
 				</Link>
 				<HeaderNav></HeaderNav>
@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => (
 		</div>
 		<div className={headerStyles.contentWrapper}>
 			<div className={headerStyles.content}>
-				<h1 className={title}> Art of Balance Fund </h1>
+				<h1 className={title}> The Art of Balance Fund </h1>
 			</div>
 		</div>
 
