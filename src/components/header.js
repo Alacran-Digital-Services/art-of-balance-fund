@@ -8,10 +8,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import HeaderNav from "./headerNav"
 
 import {
-	homeBanner,
-	bannerDetails,
 	title,
-	tagline,
 } from "./homeHeader.module.css"
 
 const Header = ({ siteTitle }) => (
@@ -28,12 +25,8 @@ const Header = ({ siteTitle }) => (
 			</div>
 		</div>
 		<div className={headerStyles.contentWrapper}>
-			<div className={headerStyles.content}>
-				<h1 className={title}> The Art of Balance Fund </h1>
-			</div>
+			<h1 className={title}> The Art of Balance Fund </h1>
 		</div>
-
-
 
 	</header>
 )
